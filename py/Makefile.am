@@ -23,7 +23,7 @@ EXTRA_DIST = setup.py src
 all:
 
 all-local:
-	$(thrift_home)/bin/thrift --gen py $(top_srcdir)/if/fb303.thrift
+	$(thrift_home)/bin/thrift --gen py:new_style $(top_srcdir)/if/fb303.thrift
 	mv gen-py/fb303/* fb303
 	$(PYTHON) setup.py build
 
